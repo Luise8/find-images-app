@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 export default function SearchForm() {
   const [keyword, setKeyword] = useState("");
@@ -18,13 +19,18 @@ export default function SearchForm() {
   return (
     <>
       <form className="form" action="submit" onSubmit={handleSubmit}>
-        <input
-          value={keyword}
-          className="form__input"
-          type="text"
-          onChange={handleChange}
-          placeholder="Enter any word..."
-        />
+        <div className="form__container-search-bar">
+          <input
+            value={keyword}
+            className="form__input"
+            type="text"
+            onChange={handleChange}
+            placeholder={"Enter any word..."}
+          />
+          <div className="form__container-magnifying-glass">
+            <FaSearch className="form__magnifying-glass"></FaSearch>
+          </div>
+        </div>
         <Button>Search</Button>
       </form>
     </>
