@@ -11,12 +11,12 @@ export default function SearchResult() {
   return (
     <div>
       Result
-      {loading == true ? (
+      {loading === true ? (
         "Loading" /* component spinner loading */
       ) : images.length === 0 || images === [] || images === undefined ? (
         "There are no results. Make a new search"
       ) : (
-        <img src={images[1].src.small} alt="" /> /* List */
+        <List images={images}></List>
       )}
     </div>
   );
