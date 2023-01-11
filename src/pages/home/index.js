@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import useCuratedImages from "hooks/use-curated-images";
 import List from "components/list";
 
 export default function Home() {
-  const { images, loading, pageResult } = useCuratedImages();
+  const elementRef = useRef();
+  const { images, loading, pageResult, setPageResult, setPage, page } =
+    useCuratedImages(elementRef);
+
   return (
     <div>
       home
@@ -12,7 +15,10 @@ export default function Home() {
       ) : images.length === 0 || images === [] || images === undefined ? (
         "There are no results. Reload the page."
       ) : (
-        <List images={images}></List>
+        <>
+          <List images={images}></List>
+          <div ref={elementRef}></div>
+        </>
       )}
     </div>
   );
