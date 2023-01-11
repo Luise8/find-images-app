@@ -3,7 +3,12 @@ import Masonry from "@mui/lab/Masonry";
 
 function ListItem({ id, alt, photographer, srcImg, urlWebOrigin }) {
   return (
-    <figure className="item">
+    <figure
+      className="item"
+      style={{
+        backgroundColor: "#555",
+      }}
+    >
       <a
         className="item__link"
         href={urlWebOrigin}
@@ -12,10 +17,16 @@ function ListItem({ id, alt, photographer, srcImg, urlWebOrigin }) {
       >
         <img
           className="item__img"
-          src={`${srcImg}?w=250&auto=format`}
-          srcSet={`${srcImg}?w=250&auto=format&dpr=2 2x`}
+          src={`${srcImg}?w=210&auto=format`}
+          srcSet={`${srcImg}?w=210&auto=format&dpr=2 2x`}
           alt={alt}
           loading="lazy"
+          style={{
+            borderBottomLeftRadius: 4,
+            borderBottomRightRadius: 4,
+            display: "block",
+            width: "100%",
+          }}
         />
         <figcaption className="item__photographer">{photographer}</figcaption>
       </a>
@@ -39,6 +50,8 @@ export default function List({ images }) {
           width: "900px",
           minHeight: "829px",
           backgroundColor: "#eee",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <Masonry columns={3} spacing={2}>
