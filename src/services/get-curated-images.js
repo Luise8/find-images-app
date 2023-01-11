@@ -1,9 +1,9 @@
 import client from "./settings";
 
-export default async function getCuratedImages() {
+export default async function getCuratedImages(page = 1) {
   try {
     const photos = await client.photos
-      .curated({ per_page: 10 })
+      .curated({ page, per_page: 20 })
       .then((photos) => {
         return photos;
       });
