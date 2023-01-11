@@ -10,9 +10,7 @@ function ListItem({ id, alt, photographer, srcImg, urlWebOrigin }) {
         rel="noopener noreferrer"
       >
         <img className="item__img" src={srcImg} alt={alt} />
-        <figcaption className="item__photographer">
-          {photographer} {id}
-        </figcaption>
+        <figcaption className="item__photographer">{photographer}</figcaption>
       </a>
     </figure>
   );
