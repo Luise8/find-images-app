@@ -1,12 +1,32 @@
 import React from "react";
 import Masonry from "@mui/lab/Masonry";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/system";
+import "components/list/styles.css";
 
-function ListItem({ id, alt, photographer, srcImg, urlWebOrigin }) {
+const theme = createTheme({
+  spacing: 16,
+});
+
+function ListItem({
+  id,
+  alt,
+  photographer,
+  srcImg,
+  urlWebOrigin,
+  heightImg,
+  widthtImg,
+}) {
   return (
     <figure
       className="item"
       style={{
-        backgroundColor: "#555",
+        position: "relative",
+        aspectRatio: widthtImg / heightImg,
+        backgroundColor: "rgba(0,0,0,0.0)",
+
+        borderBottomLeftRadius: 4,
+        borderBottomRightRadius: 4,
       }}
     >
       <a
@@ -14,6 +34,15 @@ function ListItem({ id, alt, photographer, srcImg, urlWebOrigin }) {
         href={urlWebOrigin}
         target="_blank"
         rel="noopener noreferrer"
+        style={{
+          position: "absolute",
+          width: "100%",
+          top: "0",
+          bottom: "1px",
+          backgroundColor: "red",
+          borderBottomLeftRadius: 4,
+          borderBottomRightRadius: 4,
+        }}
       >
         <img
           className="item__img"
@@ -28,6 +57,7 @@ function ListItem({ id, alt, photographer, srcImg, urlWebOrigin }) {
             width: "100%",
           }}
         />
+
         <figcaption className="item__photographer">{photographer}</figcaption>
       </a>
     </figure>
@@ -44,31 +74,35 @@ export default function List({ images }) {
       }}
     >
       <div
-        className="conatiner-list"
+        className="lists__masonry-container"
         style={{
           padding: "30px",
-          width: "900px",
+          width: "950px",
           minHeight: "829px",
           backgroundColor: "#eee",
           display: "flex",
           justifyContent: "center",
+          position: "relative",
         }}
       >
-        <Masonry columns={3} spacing={2}>
-          {images.map((image) => {
-            return (
-              <ListItem
-                //sx={{ width: "200px" }}
-                id={image.id}
-                alt={image.alt}
-                photographer={image.photographer}
-                srcImg={image.src.original}
-                urlWebOrigin={image.url}
-                key={image.id}
-              ></ListItem>
-            );
-          })}
-        </Masonry>
+        <ThemeProvider theme={theme}>
+          <Masonry columns={3} spacing={1}>
+            {images.map((image) => {
+              return (
+                <ListItem
+                  id={image.id}
+                  alt={image.alt}
+                  photographer={image.photographer}
+                  srcImg={image.src.original}
+                  urlWebOrigin={image.url}
+                  key={image.id}
+                  heightImg={image.height}
+                  widthtImg={image.width}
+                ></ListItem>
+              );
+            })}
+          </Masonry>
+        </ThemeProvider>
       </div>
     </div>
   );
