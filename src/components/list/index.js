@@ -2,7 +2,7 @@ import React from "react";
 import Masonry from "@mui/lab/Masonry";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
-import "components/list/styles.css";
+import "components/list/styles.scss";
 
 const theme = createTheme({
   spacing: 16,
@@ -21,12 +21,7 @@ function ListItem({
     <figure
       className="item"
       style={{
-        position: "relative",
         aspectRatio: widthtImg / heightImg,
-        backgroundColor: "rgba(0,0,0,0.0)",
-
-        borderBottomLeftRadius: 4,
-        borderBottomRightRadius: 4,
       }}
     >
       <a
@@ -34,28 +29,13 @@ function ListItem({
         href={urlWebOrigin}
         target="_blank"
         rel="noopener noreferrer"
-        style={{
-          position: "absolute",
-          width: "100%",
-          top: "0",
-          bottom: "1px",
-          backgroundColor: "red",
-          borderBottomLeftRadius: 4,
-          borderBottomRightRadius: 4,
-        }}
       >
         <img
           className="item__img"
-          src={`${srcImg}?w=210&auto=format`}
-          srcSet={`${srcImg}?w=210&auto=format&dpr=2 2x`}
+          src={`${srcImg}?w=415&auto=format`}
+          srcSet={`${srcImg}?w=415&auto=format&dpr=2 2x`}
           alt={alt}
           loading="lazy"
-          style={{
-            borderBottomLeftRadius: 4,
-            borderBottomRightRadius: 4,
-            display: "block",
-            width: "100%",
-          }}
         />
 
         <figcaption className="item__photographer">{photographer}</figcaption>
@@ -66,25 +46,8 @@ function ListItem({
 
 export default function List({ images }) {
   return (
-    <div
-      className="lists"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        className="lists__masonry-container"
-        style={{
-          padding: "30px",
-          width: "950px",
-          minHeight: "829px",
-          backgroundColor: "#eee",
-          display: "flex",
-          justifyContent: "center",
-          position: "relative",
-        }}
-      >
+    <div className="lists">
+      <div className="lists__masonry-container">
         <ThemeProvider theme={theme}>
           <Masonry columns={3} spacing={1}>
             {images.map((image) => {
