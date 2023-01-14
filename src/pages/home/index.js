@@ -9,12 +9,9 @@ export default function Home() {
     useCuratedImages(elementRef);
 
   return (
-    <div>
-      home
+    <div className="home">
       {loading === true ? (
         <Loading></Loading>
-      ) : images.length === 0 || images === [] || images === undefined ? (
-        "There are no results. Reload the page."
       ) : (
         <>
           <List images={images}></List>
