@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app">
       {/* Routing */}
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className="app__container-header">
           <Header></Header>
         </div>
