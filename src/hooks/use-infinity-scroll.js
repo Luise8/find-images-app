@@ -6,7 +6,6 @@ export default function useInfinityScroll({ elementRef, setPage, pageResult }) {
     throttle(
       () => {
         setPage((prevPage) => prevPage + 1);
-        console.log("intersection");
       },
       2000,
       { leading: true }

@@ -14,9 +14,6 @@ export default function SearchResult() {
     keyword,
     elementRef,
   });
-  useEffect(() => {
-    console.log("renderizado search");
-  });
 
   return (
     <div className="search-result">
