@@ -1,0 +1,16 @@
+@import "index.scss";
+.button {
+  background-color: $fifth-color;
+  color: $second-color;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  border-color: $fifth-color;
+
+  transition: background-color 0.8s, color 0.8s;
+  cursor: pointer;
+  &:hover {
+    color: $third-color;
+    border-color: $third-color;
+  }
+}
