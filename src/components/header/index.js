@@ -3,6 +3,7 @@ import SearchForm from "components/search-form";
 import { FaGithub } from "react-icons/fa";
 import myLogo from "assets/brand/favicon-my-website-16x16.png";
 import { FaLinkedin } from "react-icons/fa";
+import "components/header/styles.scss";
 
 export default function Header() {
   return (
@@ -15,7 +16,7 @@ export default function Header() {
           <div className="header__conatiner-logo">
             <a href="https://www.pexels.com">
               <img
-                src="https://images.pexels.com/lib/api/pexels.png"
+                src="https://images.pexels.com/lib/api/pexels-white.png"
                 alt="Logo of Pexels."
               />
             </a>
@@ -32,32 +33,35 @@ export default function Header() {
               Luis E. Gamez
             </a>
           </p>
-          {/*           //Github
-           */}
-          <a
-            href="https://github.com/Luise8"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub></FaGithub>
-          </a>
-          {/* Linkedin */}
-          <a
-            href="https://www.linkedin.com/in/luis-e-gamez-prado/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin></FaLinkedin>
-          </a>
-          {/*           //My Website
-           */}{" "}
-          <a
-            href="https://luise8.github.io/Freecodecamp-curses-projects/Responsive-Web-Design/Project5-Personal-Portfolio-Webpage/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={myLogo} alt="Url to my website" />
-          </a>
+          <div className="header__container-social-networks">
+            {/*           //Github
+             */}
+            <a
+              href="https://github.com/Luise8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub></FaGithub>
+            </a>
+            {/* Linkedin */}
+            <a
+              href="https://www.linkedin.com/in/luis-e-gamez-prado/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin></FaLinkedin>
+            </a>
+            {/*           //My Website
+             */}{" "}
+            <a
+              href="https://luise8.github.io/Freecodecamp-curses-projects/Responsive-Web-Design/Project5-Personal-Portfolio-Webpage/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={myLogo} alt="Url to my website" />
+              <div className="header__wrapper-mylogo"></div>
+            </a>
+          </div>
         </address>
       </div>
       <h1 className="header__title">Beautiful photos</h1>
@@ -65,6 +69,3 @@ export default function Header() {
     </header>
   );
 }
-
-//Github URL
-//https://github.com/Luise8
