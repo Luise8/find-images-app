@@ -1,3 +1,5 @@
+// Button component
+
 import React from "react";
 import "components/button/styles.scss";
 

@@ -1,3 +1,5 @@
+// SearchResult page
+
 import React from "react";
 import List from "components/list";
 import useImages from "hooks/use-images";

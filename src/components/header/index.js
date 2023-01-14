@@ -1,3 +1,5 @@
+// Header component, includes top bar, main title and SearhForm component
+
 import React from "react";
 import SearchForm from "components/search-form";
 import { FaGithub } from "react-icons/fa";

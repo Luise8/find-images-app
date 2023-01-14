@@ -1,3 +1,5 @@
+// Hook to handle curated (trending) iamges
+
 import { useEffect, useState } from "react";
 import getCuratedImages from "services/get-curated-images";
 import useInfinityScroll from "./use-infinity-scroll";

@@ -1,3 +1,5 @@
+// loading component to display while page loads
+
 import React from "react";
 import "components/loading/styles.scss";
 

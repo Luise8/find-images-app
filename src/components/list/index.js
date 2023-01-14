@@ -1,3 +1,5 @@
+// List component that includes Masonry Mui. And that renders the requested images.
+
 import React from "react";
 import Masonry from "@mui/lab/Masonry";
 import { createTheme } from "@mui/material";

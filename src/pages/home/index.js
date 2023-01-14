@@ -1,3 +1,5 @@
+// Home page
+
 import React, { useRef } from "react";
 import useCuratedImages from "hooks/use-curated-images";
 import Loading from "components/loading";

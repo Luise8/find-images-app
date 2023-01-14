@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+// Hook to handle infinty scroll with intersection
 
 import { useCallback, useEffect } from "react";
 import throttle from "just-throttle";

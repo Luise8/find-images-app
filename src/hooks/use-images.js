@@ -1,3 +1,5 @@
+// Hook to handle search of images
+
 import { useEffect, useState } from "react";
 import getImages from "services/get-images";
 import useInfinityScroll from "./use-infinity-scroll";

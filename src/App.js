@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="app">
+      {/* Routing */}
       <BrowserRouter>
         <div className="app__container-header">
           <Header></Header>

@@ -1,3 +1,5 @@
+// Component to handle search and routing
+
 import React from "react";
 import Button from "../button";
 import { useState } from "react";
