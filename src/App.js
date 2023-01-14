@@ -1,5 +1,4 @@
 import "app.scss";
-import { useState } from "react";
 import Header from "components/header";
 import Home from "pages/home";
 import SearchResult from "pages/search-result";

@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useRef } from "react";
+
+import { useCallback, useEffect } from "react";
 import throttle from "just-throttle";
 
 export default function useInfinityScroll({ elementRef, setPage, pageResult }) {

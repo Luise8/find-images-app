@@ -2,7 +2,7 @@ import React from "react";
 import List from "components/list";
 import useImages from "hooks/use-images";
 import { useParams } from "react-router-dom";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Loading from "components/loading";
 import "pages/search-result/styles.scss";
 
@@ -10,7 +10,7 @@ export default function SearchResult() {
   const elementRef = useRef();
   const { keyword } = useParams();
 
-  const { images, loading, pageResult, page } = useImages({
+  const { images, loading, pageResult } = useImages({
     keyword,
     elementRef,
   });
