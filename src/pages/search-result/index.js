@@ -4,6 +4,7 @@ import useImages from "hooks/use-images";
 import { useParams } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import Loading from "components/loading";
+import "pages/search-result/styles.scss";
 
 export default function SearchResult() {
   const elementRef = useRef();
@@ -18,14 +19,22 @@ export default function SearchResult() {
   });
 
   return (
-    <div style={{ backgroundColor: "rgb(238, 238, 238)" }}>
+    <div className="search-result">
       {loading === true ? (
         <Loading></Loading>
       ) : images.length === 0 || images === [] || images === undefined ? (
-        "There are no results. Make a new search"
+        <div className="search-result__container-quantity">
+          <h2 className="search-result__quantity-title">
+            There are no results. Make a new search
+          </h2>
+        </div>
       ) : (
         <>
-          <div>Results: {pageResult.total_results}</div>
+          <div className="search-result__container-quantity">
+            <h2 className="search-result__quantity-title">
+              Results: {pageResult.total_results}
+            </h2>
+          </div>
           <List images={images}></List>
           <div ref={elementRef}></div>
           <Loading></Loading>

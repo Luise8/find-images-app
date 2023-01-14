@@ -1,0 +1,11 @@
+.search-result {
+  &__container-quantity {
+    display: flex;
+    justify-content: center;
+
+    .search-result__quantity-title {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}
