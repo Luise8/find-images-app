@@ -1,4 +1,4 @@
-import "app.css";
+import "app.scss";
 import { useState } from "react";
 import Header from "components/header";
 import Home from "pages/home";

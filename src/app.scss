@@ -1,0 +1,13 @@
+@import "index.scss";
+
+.app {
+  background-color: $first-color;
+  color: $fifth-color;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
