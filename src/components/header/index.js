@@ -13,10 +13,20 @@ export default function Header() {
       <div className="header__top-bar">
         <div className="header__source-of-images">
           <p>
-            <a href="https://www.pexels.com">Photos provided by</a>
+            <a
+              href="https://www.pexels.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Photos provided by
+            </a>
           </p>
           <div className="header__conatiner-logo">
-            <a href="https://www.pexels.com">
+            <a
+              href="https://www.pexels.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://images.pexels.com/lib/api/pexels-white.png"
                 alt="Logo of Pexels."
@@ -28,7 +38,7 @@ export default function Header() {
           <p>
             Created by{" "}
             <a
-              rel="author"
+              rel="noopener noreferrer"
               href="https://luise8.github.io/Freecodecamp-curses-projects/Responsive-Web-Design/Project5-Personal-Portfolio-Webpage/"
               target="_blank"
             >
