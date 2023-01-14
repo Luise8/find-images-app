@@ -49,7 +49,7 @@ export default function List({ images }) {
     <div className="lists">
       <div className="lists__masonry-container">
         <ThemeProvider theme={theme}>
-          <Masonry columns={3} spacing={1}>
+          <Masonry columns={{ xs: 1, sm: 2, md: 3, xl: 4 }} spacing={1}>
             {images.map((image) => {
               return (
                 <ListItem

@@ -72,3 +72,14 @@
     }
   }
 }
+
+$breakpoint-phone: 640px;
+@media (max-width: $breakpoint-phone) {
+  .header {
+    &__top-bar {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }
+}
