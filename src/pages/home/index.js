@@ -7,7 +7,7 @@ import List from "components/list";
 
 export default function Home() {
   const elementRef = useRef();
-  const { images, loading } = useCuratedImages(elementRef);
+  const { images, loading, loadingPage } = useCuratedImages(elementRef);
 
   return (
     <div className="home">
@@ -17,7 +17,7 @@ export default function Home() {
         <>
           <List images={images}></List>
           <div ref={elementRef}></div>
-          <Loading></Loading>
+          {loadingPage ? <Loading></Loading> : null}
         </>
       )}
     </div>

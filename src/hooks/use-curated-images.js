@@ -52,5 +52,13 @@ export default function useCuratedImages(elementRef) {
 
   useInfinityScroll({ pageResult, setPage, elementRef });
 
-  return { images, pageResult, setPageResult, setPage, page, loading };
+  return {
+    images,
+    pageResult,
+    setPageResult,
+    setPage,
+    page,
+    loading,
+    loadingPage,
+  };
 }

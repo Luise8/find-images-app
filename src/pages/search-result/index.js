@@ -12,7 +12,7 @@ export default function SearchResult() {
   const elementRef = useRef();
   const { keyword } = useParams();
 
-  const { images, loading, pageResult } = useImages({
+  const { images, loading, pageResult, loadingPage } = useImages({
     keyword,
     elementRef,
   });
@@ -36,7 +36,7 @@ export default function SearchResult() {
           </div>
           <List images={images}></List>
           <div ref={elementRef}></div>
-          <Loading></Loading>
+          {loadingPage ? <Loading></Loading> : null}
         </>
       )}
     </div>
