@@ -1,0 +1,27 @@
+@import "index.scss";
+.form {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 1px;
+  &__container-search-bar {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 40px;
+    .form__input {
+      width: 100%;
+      font-family: $font-family;
+      border-radius: 3px;
+      border-color: $third-color;
+    }
+    .form__container-magnifying-glass {
+      position: absolute;
+      height: 100%;
+      right: 3px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}

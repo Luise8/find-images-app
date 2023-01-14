@@ -3,6 +3,7 @@ import Button from "../button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import "components/search-form/styles.scss";
 
 export default function SearchForm() {
   const [keyword, setKeyword] = useState("");
@@ -14,7 +15,10 @@ export default function SearchForm() {
   const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
-    navigate(`search/${keyword}`);
+    if (keyword !== "") {
+      setKeyword("");
+      navigate(`search/${keyword}`);
+    }
   }
   return (
     <>
