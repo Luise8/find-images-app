@@ -1,0 +1,16 @@
+.error {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  &__container-title {
+    display: flex;
+    justify-content: center;
+    .error__title {
+      font-size: 30px;
+    }
+  }
+}
