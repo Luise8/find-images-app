@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { useRef } from "react";
 import Loading from "components/loading";
 import "pages/search-result/styles.scss";
+import noResults from "assets/img/no-results.jpg";
 
 export default function SearchResult() {
   const elementRef = useRef();
@@ -26,6 +27,9 @@ export default function SearchResult() {
           <h2 className="search-result__quantity-title">
             There are no results. Make a new search
           </h2>
+          <div className="search-result__container-img">
+            <img src={noResults} alt="Path between trees" />
+          </div>
         </div>
       ) : (
         <>

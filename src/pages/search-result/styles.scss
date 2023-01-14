@@ -2,10 +2,24 @@
   &__container-quantity {
     display: flex;
     justify-content: center;
-
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
     .search-result__quantity-title {
       font-size: 30px;
       text-align: center;
+    }
+    .search-result__container-img {
+      display: flex;
+      justify-content: center;
+      height: 300px;
+      width: 300px;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
