@@ -1,15 +1,11 @@
-import client from "./settings";
-
 export default async function getCuratedImages(page = 1) {
   try {
-    const photos = await client.photos
-      .curated({ page, per_page: 20 })
-      .then((photos) => {
-        return photos;
-      });
-
-    return photos;
-  } catch (reason) {
-    console.log(reason);
+    const res = await fetch(
+      `https://pixabay.com/api/?key=${process.env.REACT_APP_API_KEY}&image_type=photo&category=people&page=${page}&q=yellow+flowe&per_page=3`
+    );
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    return error.message;
   }
 }
