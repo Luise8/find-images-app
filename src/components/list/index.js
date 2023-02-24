@@ -56,13 +56,13 @@ export default function List({ images }) {
               return (
                 <ListItem
                   id={image.id}
-                  alt={image.alt}
-                  photographer={image.photographer}
-                  srcImg={image.src.original}
-                  urlWebOrigin={image.url}
+                  alt={"Related with: " + image.tags}
+                  photographer={image.user}
+                  srcImg={image.webformatURL}
+                  urlWebOrigin={image.pageURL}
                   key={image.id}
-                  heightImg={image.height}
-                  widthtImg={image.width}
+                  heightImg={image.webformatHeight}
+                  widthtImg={image.webformatWidth}
                 ></ListItem>
               );
             })}
