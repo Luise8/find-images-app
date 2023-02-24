@@ -14,7 +14,7 @@ export default function Header() {
         <div className="header__source-of-images">
           <p>
             <a
-              href="https://www.pexels.com"
+              href="https://pixabay.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -23,13 +23,13 @@ export default function Header() {
           </p>
           <div className="header__conatiner-logo">
             <a
-              href="https://www.pexels.com"
+              href="https://pixabay.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="https://images.pexels.com/lib/api/pexels-white.png"
-                alt="Logo of Pexels."
+                src="https://pixabay.com/static/img/public/leaderboard_b.png"
+                alt="Pixabay"
               />
             </a>
           </div>
