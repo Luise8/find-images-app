@@ -16,13 +16,11 @@ export default function useCuratedImages(elementRef) {
     setLoading(true);
     getCuratedImages(page).then((result) => {
       setPageResult({
-        page: result.page,
-        per_page: result.per_page,
-        total_results: result.total_results,
-        prev_page: result.prev_page,
-        next_page: result.next_page,
+        page: page,
+        per_page: result.hits.length,
+        total_results: result.total,
       });
-      setImages(images.concat(result.photos));
+      setImages(images.concat(result.hits));
       setLoading(false);
     });
   }, []);
@@ -32,18 +30,13 @@ export default function useCuratedImages(elementRef) {
     setLoadingPage(true);
     getCuratedImages(page).then((result) => {
       setPageResult({
-        page: result.page,
-        per_page: result.per_page,
-        total_results: result.total_results,
-        prev_page: result.prev_page,
-        next_page: result.next_page,
+        page: page,
+        per_page: result.hits.length,
+        total_results: result.total,
       });
       setImages((prev) => {
         const ids = new Set(prev.map((d) => d.id));
-        const merged = [
-          ...prev,
-          ...result.photos.filter((d) => !ids.has(d.id)),
-        ];
+        const merged = [...prev, ...result.hits.filter((d) => !ids.has(d.id))];
         return merged;
       });
       setLoadingPage(false);
