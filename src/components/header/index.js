@@ -39,7 +39,7 @@ export default function Header() {
             Created by{" "}
             <a
               rel="noopener noreferrer"
-              href="https://luise8.github.io/Freecodecamp-curses-projects/Responsive-Web-Design/Project5-Personal-Portfolio-Webpage/"
+              href="https://luisegamez.netlify.app/"
               target="_blank"
             >
               Luis E. Gamez
@@ -66,7 +66,7 @@ export default function Header() {
             {/*           //My Website
              */}{" "}
             <a
-              href="https://luise8.github.io/Freecodecamp-curses-projects/Responsive-Web-Design/Project5-Personal-Portfolio-Webpage/"
+              href="https://luisegamez.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
