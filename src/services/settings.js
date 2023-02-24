@@ -1,7 +1,5 @@
 import { createClient } from "pexels";
 
-const client = createClient(
-  "563492ad6f917000010000013994986af94745c090b81230c0d8de91"
-);
+const client = createClient(process.env.REACT_APP_API_KEY);
 
 export default client;
