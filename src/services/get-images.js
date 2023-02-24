@@ -1,15 +1,15 @@
-import client from "./settings";
-
-export default async function getImages(query, page) {
+export default async function getImages(keyword, page) {
   try {
-    const photos = await client.photos
-      .search({ query, per_page: 20, page })
-      .then((photos) => {
-        return photos;
-      });
-
-    return photos;
-  } catch (reason) {
-    console.log(reason);
+    const res = await fetch(
+      `https://pixabay.com/api/?key=${
+        process.env.REACT_APP_API_KEY
+      }&image_type=photo&page=${page}&q=${encodeURIComponent(
+        keyword
+      )}&per_page=15`
+    );
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    return error.message;
   }
 }
