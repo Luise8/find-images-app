@@ -33,7 +33,7 @@
         }
         img {
           width: auto;
-          height: 20px;
+          height: 22px;
         }
       }
     }
@@ -80,6 +80,14 @@ $breakpoint-phone: 640px;
       flex-direction: column;
       gap: 10px;
       text-align: center;
+      .header__source-of-images {
+        a {
+          img {
+            width: auto;
+            height: 20px;
+          }
+        }
+      }
     }
   }
 }
