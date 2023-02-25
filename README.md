@@ -3,7 +3,7 @@
 ### A react application to brings up images from pexels API in a beautiful grid format. An infinite scroll is included as well as masonry. 
 
 
-## [See live demo](https://luise8.github.io/find-images-app/) 🖥️
+## [See live demo](https://find-images-app.netlify.app/) 🖥️
 
 
 ### Getting started
